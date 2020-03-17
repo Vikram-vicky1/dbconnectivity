@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Dashboard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item " >
+                  <a class="nav-link" href="register.html">Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">Login</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="signup">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-12 section-content">
+                    <h1 class="section-header"><span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> REGISTER</span></h1>
+                </div>
+            </div>
+            <div class="row text-center">
+                    <div class="col-12 mt-5">
+                        <form action="register" onSubmit="return checkPassword(this)" method="POST">
+                            <fieldset>
+                            <div class="form-group2">
+                                <label for="Fname">Enter First Name</label>
+                                <input type="text" class="form-control" id="FName" name="Fname" placeholder=" Enter First Name" required>
+                            </div>	<br>
+                            <div class="form-group2">
+                                <label for="Lname">Enter Last Name</label>
+                                <input type="text" id="LName" class="form-control" name="Lname" placeholder="Enter Last Name" required>
+                            </div> <br>
+                            <div class="form-group2">
+                                <label for="Email">Email Address</label>
+                                <input type="email" class="form-control" id="Email" name="Email" placeholder=" Enter Email id" required>
+                            </div>	<br>
+                            <div class="form-group2">
+                                <label for="Cpass">Create Password</label>
+                                <input type="password" class="form-control" id="Cpass" name="Cpass" onkeyup="validate()" placeholder=" Enter Password" required>
+                                <span toggle="#examplePassword1" title="show password" class="fa fa-eye field-icon toggle-password" style="color:rgba(0, 0, 0, 0.616); font-size: 16px;"></span>
+                                <span id="error-create-pwd"></span>
+                            </div> <br>
+                            <div class="form-group2">
+                                <label for="Rpass">Confirm Password</label>
+                                <input type="password" class="form-control" id="Rpass" name="Rpass" onchange="checkPasswordMatch();" placeholder=" Enter Confirm Password" required>
+                                <span toggle="#examplePassword2" title="show password" class="fa fa-eye field-icon toggle-password" style="color:rgba(0, 0, 0, 0.616); font-size: 16px;"></span>
+                                <span id="error-pwd"></span>
+                            </div> <br>
+                            <div class="form-group2">
+                                    <label for="telephone">Mobile No.</label>
+                                    <input type="tel" class="form-control" name="telephone" id="telephone" placeholder=" Enter 10-digit mobile no." required>
+                            </div> <br>
+
+                            <button type="submit" class="btn btn-primary w-50">Register</button>
+                            <br>
+                            <div class="login">
+                                    <h3>Already Register?<a href="login.html" class="text-dark">Login</a></h3>
+                            </div><br>
+                        </fieldset>
+                        </form>
+                    </div>        
+                </div>
+        </div>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- <script src="main.js"></script> -->
+</body>
+</html>
